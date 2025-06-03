@@ -28,10 +28,11 @@ const Hero = () => {
               words="Transforming Concepts into Seamless User Experiences"
             />
             
-            <p className="mt-6 text-center md:tracking-wider text-sm md:text-lg lg:text-xl bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 text-transparent bg-clip-text">
+            <p className="mt-6 text-center md:tracking-wider text-sm md:text-lg lg:text-xl bg-gradient-to-r from-purple-300 via-violet-300 to-blue-300 text-transparent bg-clip-text">
               Hi, I'm Eyob, a full-stack <span className="font-bold">MERN</span> Developer based in Ethiopia.
             </p>
-            <a href="#about">
+            <a href="#about"
+            className="sm:mt-3">
               <MagicButton
               title ="Show my work"
               icon={<FaLocationArrow/>}

@@ -49,7 +49,7 @@ export const navItems = [
     
       {
         id: 5,
-        title: "Currently building a JS Animation library",
+        title: "Currently building a SAAS App",
         description: "The Inside Scoop",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -74,9 +74,9 @@ export const navItems = [
         id: 1,
         title: "Daynamic movie web app",
         des: "Explore the moview web app you'll enjoy without the hassle.",
-        img: "/p1.svg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-        link: "https://github.com/eyob13-coder/movieverse",
+        img: "/MovieApp.png",
+        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", ],
+        link: "https://movieverse-nu.vercel.app/",
       },
       {
         id: 2,
@@ -107,7 +107,7 @@ export const navItems = [
     export const testimonials = [
       {
         quote:
-          "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+          "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
       },
@@ -206,13 +206,16 @@ export const navItems = [
       {
         id: 1,
         img: "/git.svg",
+        link: "https://github.com/eyob13-coder"
       },
       {
         id: 2,
         img: "/twit.svg",
+        link: "https://x.com/Eyob_Geremew_"
       },
       {
         id: 3,
         img: "/link.svg",
+        link: "https://www.linkedin.com/in/eyob-geremew-1a7b53302"
       },
     ];
