@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Eyob | Portfolio",
-  description: "Modern full-stack Develper (MERN) portfolio",
+  description: "Modern full-stack Developer (MERN) portfolio",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
