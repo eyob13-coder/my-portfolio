@@ -82,7 +82,7 @@ export const navItems = [
         id: 2,
         title: "Snapcast: Screen Recording App",
         des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        img: "/Snapcast.jpg",
+        img: "/Snapcast.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
         link: "https://screen-recorder-ten-alpha.vercel.app/",
       },
