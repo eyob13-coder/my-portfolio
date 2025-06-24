@@ -90,7 +90,7 @@ export const navItems = [
     id: 3,
     title: "Converso",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/converso.jpg",
+    img: "/Converso.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
     link: "https://github.com/eyob13-coder/SAAS-App",
    },
