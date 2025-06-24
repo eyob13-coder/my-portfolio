@@ -82,7 +82,7 @@ export const navItems = [
         id: 2,
         title: "Snapcast: Screen Recording App",
         des: "Simplify your video Recording experience with snapcast. Seamlessly connect with sfriends.",
-        img: "/Screen.png",
+        img: "/Sreen.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
         link: "https://github.com/eyob13-coder/Screen-Recorder",
       },
@@ -91,7 +91,7 @@ export const navItems = [
         title: "Converso",
         des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
         img: "/converso.jpg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
+        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
         link: "https://github.com/eyob13-coder/SAAS-App",
       },
     //   {
@@ -181,14 +181,14 @@ export const navItems = [
       },
       {
         id: 2,
-        title: "Mobile App Dev - JSM Tech",
-        desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+        title: "Jounior Cloud-Engineer",
+        desc: "Currently learning Cloud-Engineering brought by MentorMeCollective associated with Google Cloud",
         className: "md:col-span-2", // change to md:col-span-2
         thumbnail: "/exp2.svg",
       },
       {
         id: 3,
-        title: "Freelance App Dev Project",
+        title: "Freelance  Project",
         desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
         className: "md:col-span-2", // change to md:col-span-2
         thumbnail: "/exp3.svg",
