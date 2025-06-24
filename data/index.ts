@@ -74,65 +74,65 @@ export const navItems = [
         id: 1,
         title: "Daynamic movie web app",
         des: "Explore the movie web app you'll enjoy without the hassle.",
-        img: "/p1.svg",
+        img: "/MovieApp.png",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/app.svg"],
-        link: "https://movieverse-nu.vercel.app/",
+        link: "https://github.com/eyob13-coder/movieverse",
       },
       {
         id: 2,
         title: "Snapcast: Screen Recording App",
         des: "Simplify your video Recording experience with snapcast. Seamlessly connect with sfriends.",
-        img: "/p2.svg",
+        img: "/Screen.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link: "https://screen-recorder-ten-alpha.vercel.app/",
+        link: "https://github.com/eyob13-coder/Screen-Recorder",
       },
       {
         id: 3,
         title: "Converso",
         des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-        img: "/p3.svg",
+        img: "/converso.jpg",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
-        link: "https://github.com/adrianhajdin/ai_saas_app",
+        link: "https://github.com/eyob13-coder/SAAS-App",
       },
-      {
-        id: 4,
-        title: "Animated Apple Iphone 3D Website",
-        des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-        img: "/p4.svg",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-        link: "https://github.com/adrianhajdin/iphone",
-      },
+    //   {
+    // //     id: 4,
+    // //     title: "Animated Apple Iphone 3D Website",
+    // //     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    // //     img: "/p4.svg",
+    // //     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    // //     link: "https://github.com/adrianhajdin/iphone",
+    // //   },
     ];
     
     export const testimonials = [
       {
         quote:
-          "Collaborating with  was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
+          "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
       },
       {
         quote:
     
-    "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
       },
       {
         quote:
-          "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+          "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
       },
       {
         quote:
-          "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+          "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
       },
       {
         quote:
-          "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+          "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
       },
