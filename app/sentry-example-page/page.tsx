@@ -1,6 +1,5 @@
 "use client";
 
-import Head from "next/head";
 import * as Sentry from "@sentry/nextjs";
 import { useState, useEffect } from "react";
 
@@ -10,6 +9,32 @@ class SentryExampleFrontendError extends Error {
     this.name = "SentryExampleFrontendError";
   }
 }
+
+export const metadata = {
+  title: "Sentry Example Page | Eyob Portfolio",
+  description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
+  openGraph: {
+    title: "Sentry Example Page | Eyob Portfolio",
+    description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
+    url: "https://my-portfolio-taupe-sigma-98.vercel.app/sentry-example-page",
+    siteName: "Eyob Portfolio",
+    images: [
+      {
+        url: "https://my-portfolio-taupe-sigma-98.vercel.app/og-image.jpg", // Replace with your OG image
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sentry Example Page | Eyob Portfolio",
+    description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
+    images: ["https://my-portfolio-taupe-sigma-98.vercel.app/og-image.jpg"], // Replace with your OG image
+  },
+};
 
 export default function Page() {
   const [hasSentError, setHasSentError] = useState(false);
@@ -25,11 +50,6 @@ export default function Page() {
 
   return (
     <div>
-      <Head>
-        <title>sentry-example-page</title>
-        <meta name="description" content="Test Sentry for your Next.js app!" />
-      </Head>
-
       <main>
         <div className="flex-spacer" />
         <svg height="40" width="40" fill="none" xmlns="http://www.w3.org/2000/svg">
