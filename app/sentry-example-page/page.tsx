@@ -10,31 +10,31 @@ class SentryExampleFrontendError extends Error {
   }
 }
 
-export const metadata = {
-  title: "Sentry Example Page | Eyob Portfolio",
-  description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
-  openGraph: {
-    title: "Sentry Example Page | Eyob Portfolio",
-    description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
-    url: "https://my-portfolio-taupe-sigma-98.vercel.app/sentry-example-page",
-    siteName: "Eyob Portfolio",
-    images: [
-      {
-        url: "https://my-portfolio-taupe-sigma-98.vercel.app/og-image.jpg", // Replace with your OG image
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sentry Example Page | Eyob Portfolio",
-    description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
-    images: ["https://my-portfolio-taupe-sigma-98.vercel.app/og-image.jpg"], // Replace with your OG image
-  },
-};
+// export const metadata = {
+//   title: "Sentry Example Page | Eyob Portfolio",
+//   description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
+//   openGraph: {
+//     title: "Sentry Example Page | Eyob Portfolio",
+//     description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
+//     url: "https://my-portfolio-taupe-sigma-98.vercel.app/sentry-example-page",
+//     siteName: "Eyob Portfolio",
+//     images: [
+//       {
+//         url: "https://my-portfolio-taupe-sigma-98.vercel.app/og-image.jpg", // Replace with your OG image
+//         width: 1200,
+//         height: 630,
+//       },
+//     ],
+//     locale: "en_US",
+//     type: "website",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Sentry Example Page | Eyob Portfolio",
+//     description: "Test Sentry integration and error monitoring in Eyob's Next.js portfolio app.",
+//     images: ["https://my-portfolio-taupe-sigma-98.vercel.app/og-image.jpg"], // Replace with your OG image
+//   },
+// };
 
 export default function Page() {
   const [hasSentError, setHasSentError] = useState(false);
