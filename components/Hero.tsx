@@ -33,10 +33,11 @@ const Hero = () => {
             <TextGenerateEffect
               className="text-center text-[32px] md:text-5xl lg:text-6xl font-bold"
               words="Transforming Concepts into Seamless User Experiences"
+
             />
             
             <p className="mt-3 md:mt-6 text-center md:tracking-wider text-sm md:text-lg lg:text-xl bg-gradient-to-r from-purple-300 via-violet-300 to-blue-300 text-transparent bg-clip-text">
-              Hi, I'm Eyob, a full-stack <span className="font-bold">MERN</span> Developer based in Ethiopia.
+              Hi, I'm Eyob, a full-stack <span className="font-bold">{"( MERN )"}</span> Developer based in Ethiopia.
             </p>
             
             <a href="#about" className="mt-3 md:mt-3 block">

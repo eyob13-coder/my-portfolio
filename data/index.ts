@@ -94,14 +94,14 @@ export const navItems = [
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
     link: "https://github.com/eyob13-coder/SAAS-App",
    },
-    //{
+    // {
     // // id: 4,
-    // // title: "Animated Apple Iphone 3D Website",
-    // // des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    // // img: "/p4.svg",
-    // // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    // // link: "https://github.com/adrianhajdin/iphone",
-    // //},
+    // // title: "A personal Telegram bot for developers",
+    // // des: "A Telegram bot that helps developers manage their projects and tasks.",
+    // // img: "/bot.png",
+    // // // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    // // link: "https://github.com/eyob13-coder/dev-toolkit-bot",
+    // // },
     ];
     
     export const testimonials = [

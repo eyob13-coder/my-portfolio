@@ -11,32 +11,32 @@ import Approach from '@/components/Approach';
 import Footer from '@/components/Footer';
 import Script from "next/script";
 
-export const metadata = {
-  title: "Eyob | Full-Stack Developer Portfolio",
-  description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
-  keywords: ["Eyob", "Portfolio", "Full-Stack Developer", "MERN", "React", "Next.js", "JavaScript", "TypeScript"],
-  openGraph: {
-    title: "Eyob | Full-Stack Developer Portfolio",
-    description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
-    url: "https://my-portfolio-taupe-sigma-98.vercel.app/", // Replace with your real domain
-    siteName: "Eyob Portfolio",
-    images: [
-      {
-        url: "https://my-portfolio-taupe-sigma-98.vercel.app/projects", // Replace with your OG image
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Eyob | Full-Stack Developer Portfolio",
-    description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
-    images: ["https://my-portfolio-taupe-sigma-98.vercel.app/"], // Replace with your OG image
-  },
-};
+// export const metadata = {
+//   title: "Eyob | Full-Stack Developer Portfolio",
+//   description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
+//   keywords: ["Eyob", "Portfolio", "Full-Stack Developer", "MERN", "React", "Next.js", "JavaScript", "TypeScript"],
+//   openGraph: {
+//     title: "Eyob | Full-Stack Developer Portfolio",
+//     description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
+//     url: "https://my-portfolio-taupe-sigma-98.vercel.app/", // Replace with your real domain
+//     siteName: "Eyob Portfolio",
+//     images: [
+//       {
+//         url: "https://my-portfolio-taupe-sigma-98.vercel.app/projects", // Replace with your OG image
+//         width: 1200,
+//         height: 630,
+//       },
+//     ],
+//     locale: "en_US",
+//     type: "website",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Eyob | Full-Stack Developer Portfolio",
+//     description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
+//     images: ["https://my-portfolio-taupe-sigma-98.vercel.app/"], // Replace with your OG image
+//   },
+// };
 
 export default function Home() {
   return (
