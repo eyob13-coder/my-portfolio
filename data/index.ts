@@ -90,18 +90,18 @@ export const navItems = [
     id: 3,
     title: "Converso",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/Converso.jpg",
+    img: "/resume.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://github.com/eyob13-coder/SAAS-App",
+    link: "https://github.com/eyob13-coder/AI-resume-analyzer",
    },
-    // {
-    // // id: 4,
-    // // title: "A personal Telegram bot for developers",
-    // // des: "A Telegram bot that helps developers manage their projects and tasks.",
-    // // img: "/bot.png",
-    // // // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    // // link: "https://github.com/eyob13-coder/dev-toolkit-bot",
-    // // },
+     {
+      id: 4,
+     title: "AI-Resume-Analayzer",
+     des: "A modern, full-stack web application for analyzing resumes using AI, providing ATS (Applicant Tracking System) feedback and improvement tips. Built with React, React Router, TypeScript, Zustand, and TailwindCSS.",
+     img: "/bot.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg",],
+    link: "https://github.com/eyob13-coder/dev-toolkit-bot",
+     },
     ];
     
     export const testimonials = [
