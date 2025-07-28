@@ -90,17 +90,17 @@ export const navItems = [
     id: 3,
     title: "Converso",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/resume.png",
+    img: "/Converso.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://github.com/eyob13-coder/AI-resume-analyzer",
+    link: "https://github.com/eyob13-coder/SAAS-App",
    },
      {
       id: 4,
      title: "AI-Resume-Analayzer",
      des: "A modern, full-stack web application for analyzing resumes using AI, providing ATS (Applicant Tracking System) feedback and improvement tips. Built with React, React Router, TypeScript, Zustand, and TailwindCSS.",
-     img: "/bot.png",
+     img: "/resume.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg",],
-    link: "https://github.com/eyob13-coder/dev-toolkit-bot",
+    link: "https://github.com/eyob13-coder/AI-resume-analyzer",
      },
     ];
     
