@@ -4,8 +4,12 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { BackgroundBeamsWithCollision } from "./ui/BackgroundBeamWithCollision";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
+import React from "react";
+import ResumeDialog from "./ui/ResumeDialog";
 
 const Hero = () => {
+  const [openResume, setOpenResume] = React.useState(false);
+
   return (
     <div className="relative pb-8 pt-20 md:pb-20 md:pt-36 w-full overflow-hidden">
       <div className="absolute inset-0">
@@ -37,16 +41,26 @@ const Hero = () => {
             />
             
             <p className="mt-3 md:mt-6 text-center md:tracking-wider text-sm md:text-lg lg:text-xl bg-gradient-to-r from-purple-300 via-violet-300 to-blue-300 text-transparent bg-clip-text">
-              Hi, I'm Eyob, a full-stack <span className="font-bold">{"( MERN )"}</span> Developer based in Ethiopia.
+              Hi, I&#39;m Eyob, a full-stack <span className="font-bold">{"( MERN )"}</span> Developer based in Ethiopia.
             </p>
             
-            <a href="#about" className="mt-3 md:mt-3 block">
-              <MagicButton
-                title="Show my work"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
-            </a>
+            <div className="mt-3 md:mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="#about" className="block">
+                <MagicButton
+                  title="Show my work"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+              <button onClick={() => setOpenResume(true)} className="block">
+                <MagicButton
+                  title="See Resume"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                  otherClasses=""
+                />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -61,6 +75,13 @@ const Hero = () => {
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
         </div>
       </BackgroundBeamsWithCollision>
+
+      <ResumeDialog
+        open={openResume}
+        onOpenChange={setOpenResume}
+        src="/resume.pdf"
+        fileName="Eyob-Resume"
+      />
     </div>
   );
 };
