@@ -2,6 +2,7 @@
 
 import React from "react";
 import { IoClose } from "react-icons/io5";
+import Image from "next/image";
 
 type ResumeDialogProps = {
   open: boolean;
@@ -32,10 +33,13 @@ const ResumeDialog = ({ open, onOpenChange, src, fileName }: ResumeDialogProps) 
 
           <div className="w-full h-full bg-black">
             <object data={src} type="application/pdf" className="w-full h-full">
-              <img
+              <Image
                 src={src}
                 alt="Resume preview"
-                className="w-full h-full object-contain bg-black"
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               />
             </object>
           </div>
