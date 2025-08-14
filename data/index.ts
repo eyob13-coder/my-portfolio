@@ -1,6 +1,9 @@
+import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaLightbulb, FaRocket} from 'react-icons/fa';
+
 export const navItems = [
    { name: "About", link: "#about" },
    { name: "Projects", link: "#projects" },
+   { name: "Skills", link: "#skills" },
    { name: "Testimonials", link: "#testimonials" },
    { name: "Contact", link: "#contact" },
     ];
@@ -49,7 +52,7 @@ export const navItems = [
     
    {
     id: 5,
-    title: "Currently building a SAAS App",
+    title: "Currently building a SaaS App",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -68,6 +71,40 @@ export const navItems = [
     spareImg: "",
    },
     ];
+
+export const skillCategories = [
+  {
+    category: "Frontend",
+    skills: [
+      { name: "React", level: 95, icon: "/re.svg", color: "from-cyan-400 to-blue-500" },
+      { name: "Next.js", level: 90, icon: "/next.svg", color: "from-white to-gray-300" },
+      { name: "TypeScript", level: 88, icon: "/ts.svg", color: "from-blue-500 to-blue-700" },
+      { name: "Tailwind CSS", level: 92, icon: "/tail.svg", color: "from-cyan-400 to-blue-500" },
+      { name: "Three.js", level: 75, icon: "/three.svg", color: "from-purple-400 to-pink-500" },
+      { name: "GSAP", level: 70, icon: "/gsap.svg", color: "from-green-400 to-green-600" },
+    ]
+  },
+  {
+    category: "Backend",
+    skills: [
+      { name: "Node.js", level: 85, icon: "/c.svg", color: "from-green-400 to-green-600" },
+      { name: "Express.js", level: 80, icon: "/c.svg", color: "from-gray-400 to-gray-600" },
+      { name: "MongoDB", level: 78, icon: "/mongodb.svg", color: "from-green-500 to-green-700" },
+      { name: "REST APIs", level: 88, icon: "/c.svg", color: "from-blue-400 to-blue-600" },
+      { name: "Appwrite", level: 75, icon: "/app.svg", color: "from-red-400 to-red-600" },
+    ]
+  },
+  {
+    category: "DevOps & Tools",
+    skills: [
+      { name: "Git", level: 90, icon: "/git.svg", color: "from-orange-400 to-red-500" },
+      { name: "Docker", level: 70, icon: "/dock.svg", color: "from-blue-400 to-blue-600" },
+      { name: "AWS", level: 65, icon: "/aws.svg", color: "from-yellow-400 to-orange-500" },
+      { name: "CI/CD", level: 75, icon: "/cicd.svg", color: "from-green-400 to-blue-500" },
+      { name: "Cloudinary", level: 80, icon: "/cloud.svg", color: "from-blue-400 to-purple-500" },
+    ]
+  }
+];
     
     export const projects = [
    {
@@ -107,7 +144,7 @@ export const navItems = [
     export const testimonials = [
    {
     quote:
-      "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
+     "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
    },
@@ -120,19 +157,19 @@ export const navItems = [
    },
    {
     quote:
-      "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
+     "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
    },
    {
     quote:
-      "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
+     "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
    },
    {
     quote:
-      "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
+     "Collaborating with Eyob was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Eyob's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Eyob is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
    },
@@ -203,24 +240,48 @@ export const navItems = [
     ];
     
     export const socialMedia = [
-   {
+       {icon: FaGithub, href: "https://github.com/eyob13-coder", label: "GitHub" },
+       {icon: FaLinkedin, href: "https://www.linkedin.com/in/eyob-geremew-1a7b53302", label: "LinkedIn"},
+       {icon: FaTwitter, href: "https://x.com/Eyob_Geremew_", label: "Twitter" }]
+    
+
+export const resumeData = {
+  downloadUrl: "/resume.pdf",
+  previewUrl: "/resume.png",
+  title: "Download My Resume",
+  description: "Get a detailed overview of my experience, skills, and achievements"
+};
+
+
+export const blogPosts = [
+  {
     id: 1,
-    img: "/git.svg",
-        link: "https://github.com/eyob13-coder"
-   },
-   {
+    title: "Building Scalable MERN Applications",
+    excerpt: "Learn the best practices for creating robust, scalable applications using the MERN stack. From architecture decisions to deployment strategies.",
+    category: "Development",
+    icon: FaCode,
+    color: "from-blue-500 to-cyan-500",
+    readTime: "5 min read",
+    date: "2024",
+  },
+  {
     id: 2,
-    img: "/twit.svg",
-        link: "https://x.com/Eyob_Geremew_"
-   },
-   {
+    title: "Next.js 15: What's New & Exciting",
+    excerpt: "Exploring the latest features in Next.js 15, including the new app router improvements, performance enhancements, and developer experience upgrades.",
+    category: "Next.js",
+    icon: FaRocket,
+    color: "from-purple-500 to-pink-500",
+    readTime: "7 min read",
+    date: "2024",
+  },
+  {
     id: 3,
-    img: "/link.svg",
-        link: "https://www.linkedin.com/in/eyob-geremew-1a7b53302"
-   },
-    ];
-// export const Latest = [{
-//     title: "Check out my latest articles",
-//     des: "I share updates from my journey in tech-side projects, personal insights, thoughts, and latest trends on Telegram channel called night_code_vibe, where i'm life-long learner and growing too. feel free to join💥 ",
-//     link:"t.me/night_code_vibe"
-// }]
+    title: "AI in Modern Web Development",
+    excerpt: "How artificial intelligence is revolutionizing web development workflows, from code generation to automated testing and optimization.",
+    category: "AI & Future",
+    icon: FaLightbulb,
+    color: "from-green-500 to-emerald-500",
+    readTime: "6 min read",
+    date: "2024",
+  },
+];

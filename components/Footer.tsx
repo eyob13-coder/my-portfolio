@@ -1,7 +1,8 @@
 import React from 'react'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
-import { socialMedia } from '@/data'
+import { socialMedia } from '@/data';
+import { motion } from "framer-motion";
 
 
 const Fotter = () => {
@@ -11,7 +12,7 @@ const Fotter = () => {
         <h1 className='heading lg:max-w-[45vw]'>
         Ready to take your digital <span className='text-purple-300'> presence to the next level?</span>
         </h1>
-        <p className='text-white-200 md:mt-10 my-5 text-center'>Reach out to me today and let's discuss how I can help you yo achive your goals.</p>
+        <p className='text-white-200 md:mt-10 my-5 text-center'>Reach out to me today and let&#39;s discuss how I can help you yo achive your goals.</p>
         <a href="mailto:eyobgeremew618@gmail,com">
           <MagicButton
           title="Let's get in touch."
@@ -20,28 +21,37 @@ const Fotter = () => {
           />
         </a>
        </div>
-       <div className='flex mt-16 md:flex-row flex-col justify-between items-center'>
-        <p className='md:text-base text-sm md:font-normal font-light'> Copyright © 2025 Eyob. G</p>
-       </div>
-       <div className='flex items-center md:gap-3 gap-6 mt-2'>
-        {socialMedia.map((profile) =>(
-          <div key={profile.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border bprder-black-300'>
-           
-           <a href={profile.link} target="_blank" rel="noopener noreferrer">
-           <img
-            src={profile.img}
-            alt="profile"
-            width={20}
-            height={20}
-            />
-           </a>
-            
+       
+        {/* Social Links */}
+        <motion.div 
+              className="flex justify-center gap-4 mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
+             {socialMedia.map((social, index) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 
+                             flex items-center justify-center text-white hover:bg-white/20 
+                             hover:border-white/40 transition-all duration-300 group"
+                  whileHover={{ y: -5, scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
+                >
+                  <social.icon className="text-xl group-hover:scale-110 transition-transform duration-300" />
+                </motion.a>
+              ))}
 
-          </div>
-        ))}
-       </div>
-       <div>
-       </div>
+            </motion.div>
+            <div className='flex mt-16 md:flex-row flex-col justify-center items-center'>
+                <p className='md:text-base text-sm md:font-normal font-light'> Copyright © 2025 Eyob. G</p>
+            </div>
        
     </footer>
   )
