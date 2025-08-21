@@ -1,4 +1,4 @@
-import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaLightbulb, FaRocket} from 'react-icons/fa';
+import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaLightbulb, FaRocket, FaReact, FaNodeJs, FaGit, FaDocker, FaAws, FaCss3} from 'react-icons/fa';
 
 export const navItems = [
    { name: "About", link: "#about" },
@@ -284,4 +284,17 @@ export const blogPosts = [
     readTime: "6 min read",
     date: "2024",
   },
+];
+
+export const techIcons = [
+  { name: "React", icon: FaReact, color: "from-cyan-400 to-blue-500" },
+  { name: "Next.js", icon: "▲", color: "from-white to-gray-300" },
+  { name: "TypeScript", icon: "TS", color: "from-blue-500 to-blue-700" },
+  { name: "Node.js", icon: FaNodeJs, color: "from-green-400 to-green-600" },
+  { name: "MongoDB", icon: "🍃", color: "from-green-500 to-green-700" },
+  { name: "Tailwind", icon: FaCss3, color: "from-cyan-400 to-blue-500" },
+  { name: "Three.js", icon: "3D", color: "from-purple-400 to-pink-500" },
+  { name: "Docker", icon: FaDocker, color: "from-blue-400 to-blue-600" },
+  { name: "Git", icon: FaGit, color: "from-orange-400 to-red-500" },
+  { name: "AWS", icon:FaAws, color: "from-yellow-400 to-orange-500" },
 ];

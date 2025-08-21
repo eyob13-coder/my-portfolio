@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import  { useState } from "react";
 import { motion } from "framer-motion";
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -116,7 +117,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full resume-button disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full resume-button disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>

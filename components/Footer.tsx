@@ -1,6 +1,4 @@
 import React from 'react'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa6'
 import { socialMedia } from '@/data';
 import { motion } from "framer-motion";
 
@@ -8,19 +6,7 @@ import { motion } from "framer-motion";
 const Fotter = () => {
   return (
     <footer className="w-full mb[100px] pb-10 md:mb-5" id="contact">
-       <div className="flex flex-col items-center">
-        <h1 className='heading lg:max-w-[45vw]'>
-        Ready to take your digital <span className='text-purple-300'> presence to the next level?</span>
-        </h1>
-        <p className='text-white-200 md:mt-10 my-5 text-center'>Reach out to me today and let&#39;s discuss how I can help you yo achive your goals.</p>
-        <a href="mailto:eyobgeremew618@gmail,com">
-          <MagicButton
-          title="Let's get in touch."
-          icon={<FaLocationArrow/>}
-          position='right'
-          />
-        </a>
-       </div>
+       
        
         {/* Social Links */}
         <motion.div 

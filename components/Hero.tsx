@@ -3,14 +3,13 @@ import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { BackgroundBeamsWithCollision } from "./ui/BackgroundBeamWithCollision";
 import MagicButton from "./ui/MagicButton";
-
 import { FaLocationArrow } from "react-icons/fa6";
-import React from "react";
+import React, { useState } from "react";
 import ResumeDialog from "./ui/ResumeDialog";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [openResume, setOpenResume] = React.useState(false);
+  const [openResume, setOpenResume] = useState(false);
 
   return (
     <div className="relative pb-8 pt-20 md:pb-20 md:pt-36 w-full overflow-hidden">

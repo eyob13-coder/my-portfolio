@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { skillCategories } from "../../data/index";
+import Image from 'next/image';
 
 const SkillsGrid = () => {
   return (
@@ -30,9 +31,9 @@ const SkillsGrid = () => {
             </h2>
             
             <div className="skills-container">
-              {category.skills.map((skill, skillIndex) => (
+              {category.skills.map(({color, icon, name, level} ,skillIndex) => (
                 <motion.div
-                  key={skill.name}
+                  key={name}
                   className="group relative"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -43,25 +44,26 @@ const SkillsGrid = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-3">
                         <div className={`
-                          skill-icon bg-gradient-to-br ${skill.color}
+                          skill-icon bg-gradient-to-br ${color}
                         `}>
-                          <img 
-                            src={skill.icon} 
-                            alt={skill.name} 
-                            className="w-6 h-6"
+                          <Image
+                            src={icon} 
+                            alt={name} 
+                            width={6}
+                            height={6}
                           />
                         </div>
-                        <span className="text-white font-medium">{skill.name}</span>
+                        <span className="text-white font-medium">{name}</span>
                       </div>
-                      <span className="text-purple-300 font-bold">{skill.level}%</span>
+                      <span className="text-purple-300 font-bold">{level}%</span>
                     </div>
                     
                     {/* Progress bar */}
                     <div className="skill-progress">
                       <motion.div
-                        className={`skill-progress-bar bg-gradient-to-r ${skill.color}`}
+                        className={`skill-progress-bar bg-gradient-to-r ${color}`}
                         initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
+                        whileInView={{ width: `${level}%` }}
                         transition={{ duration: 1, delay: skillIndex * 0.1 }}
                       />
                     </div>
@@ -69,7 +71,7 @@ const SkillsGrid = () => {
                   
                   {/* Hover glow effect */}
                   <div className={`
-                    skill-hover-glow bg-gradient-to-r ${skill.color}
+                    skill-hover-glow bg-gradient-to-r ${color}
                   `} />
                 </motion.div>
               ))}
@@ -91,7 +93,7 @@ const SkillsGrid = () => {
             <div className="achievement-label">Projects Completed</div>
           </div>
           <div className="text-center">
-            <div className="achievement-number text-blue-300">3+</div>
+            <div className="achievement-number text-blue-300">2+</div>
             <div className="achievement-label">Years Experience</div>
           </div>
           <div className="text-center">

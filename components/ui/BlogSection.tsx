@@ -55,7 +55,7 @@ const BlogSection = () => {
                   </p>
                   <div className="flex items-center gap-4">
                     <motion.a
-                      href="https://t.me/night_code_vibe"
+                      href="https://t.me/night_coders_vibe"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-blue-500 
@@ -68,7 +68,7 @@ const BlogSection = () => {
                       Join Channel
                       <FaArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </motion.a>
-                    <div className="text-white/50 text-sm">2.5k+ members</div>
+                    <div className="text-white/50 text-sm">400+ members</div>
                   </div>
                 </div>
                 

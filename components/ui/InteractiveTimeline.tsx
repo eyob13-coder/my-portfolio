@@ -33,51 +33,54 @@ const InteractiveTimeline = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              {/* Content */}
-              <div className={`w-5/12 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
-                <motion.div
-                  className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 
-                             hover:border-white/20 transition-all duration-300 group cursor-pointer"
-                  whileHover={{ 
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
-                  }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 
-                                  flex items-center justify-center text-white text-2xl font-bold
-                                  group-hover:scale-110 transition-transform duration-300">
-                      <Image src={thumbnail} alt="experience thumbnail" width={48} height={48} className="w-12 h-12 object-contain" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 
-                                   transition-colors duration-300">
-                        {title}
-                      </h3>
-                      <p className="text-white/70 leading-relaxed">
-                        {desc}
-                      </p>
-                      
-                      {/* Tech tags */}
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {["React", "Next.js", "TypeScript", "Node.js"].map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full
-                                     border border-purple-500/30"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Hover glow effect */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 
-                                 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 -z-10" />
-                </motion.div>
-              </div>
+             {/* Content */}
+<div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
+  <motion.div
+    className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 
+               hover:border-white/20 transition-all duration-300 group cursor-pointer break-words overflow-hidden"
+    whileHover={{ 
+      scale: 1.05,
+      boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+    }}
+  >
+    <div className="flex flex-col md:flex-row items-start gap-4">
+      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 
+                    flex items-center justify-center text-white text-2xl font-bold
+                    group-hover:scale-110 transition-transform duration-300">
+
+        <Image src={thumbnail} 
+        alt="experience thumbnail"
+        width={48}
+        height={48}
+        className="w-12 h-12 object-contain" />
+
+      </div>
+      <div className="flex-1">
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 
+                     transition-colors duration-300 break-words">
+          {title}
+        </h3>
+        <p className="text-white/70 leading-relaxed break-words">
+          {desc}
+        </p>
+        
+        {/* Tech tags */}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {["React", "Next.js", "TypeScript", "Node.js"].map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full
+                       border border-purple-500/30 break-words"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</div>
+
               
               {/* Timeline dot */}
               <div className="relative z-10">
@@ -125,7 +128,7 @@ const InteractiveTimeline = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                4+
+                2+
               </motion.div>
               <div className="text-white/70">Years Learning</div>
             </div>
@@ -156,4 +159,4 @@ const InteractiveTimeline = () => {
   );
 };
 
-export default InteractiveTimeline; 
+export default InteractiveTimeline;
