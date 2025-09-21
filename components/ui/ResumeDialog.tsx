@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import { IoClose } from "react-icons/io5";
-// import Image from "next/image";
+
 
 type ResumeDialogProps = {
   open: boolean;
@@ -26,14 +27,14 @@ const ResumeDialog = ({ open, onOpenChange, src, fileName }: ResumeDialogProps) 
           <button
             aria-label="Close resume"
             onClick={() => onOpenChange(false)}
-            className="absolute top-3 right-3 z-10 inline-flex items-center justify-center rounded-md bg-white/10 hover:bg-white/20 text-white p-2"
+            className="absolute top-3 right-3 z-10 inline-flex items-center justify-center rounded-md bg-white/10 hover:bg-white/20 text-white p-2 cursor-pointer"
           >
             <IoClose className="h-5 w-5" />
           </button>
 
           <div className="w-full h-full bg-black">
             <object data={src} type="application/pdf" className="w-full h-full">
-              <img
+              <Image
                 src={src}
                 alt="Resume preview"
                 

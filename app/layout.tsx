@@ -1,4 +1,3 @@
-// import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
@@ -13,13 +12,6 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata: Metadata = {
-//   title: "Eyob | Portfolio",
-//   description: "Modern full-stack Developer (MERN) portfolio",
-//   icons: {
-//     icon: '/favicon.svg',
-//   },
-// };
 
 export default function RootLayout({
   children,
