@@ -12,7 +12,7 @@ const Hero = () => {
   const [openResume, setOpenResume] = useState(false);
 
   return (
-    <div className="relative pb-8 pt-20 md:pb-20 md:pt-36 w-full overflow-hidden">
+    <div id="hero" className="relative pb-8 pt-20 md:pb-20 md:pt-36 w-full overflow-hidden min-h-screen flex items-center">
       <div className="absolute inset-0">
         <Spotlight 
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" 

@@ -44,13 +44,14 @@ const SkillsGrid = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-3">
                         <div className={`
-                          skill-icon bg-gradient-to-br ${color}
+                          skill-icon bg-gradient-to-br ${color} opacity-80
                         `}>
                           <Image
                             src={icon} 
                             alt={name} 
-                            width={6}
-                            height={6}
+                            width={20}
+                            height={20}
+                            className="filter brightness-0 invert"
                           />
                         </div>
                         <span className="text-white font-medium">{name}</span>

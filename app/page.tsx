@@ -13,36 +13,22 @@ import SkillsGrid from "@/components/ui/SkillsGrid";
 import InteractiveTimeline from "@/components/ui/InteractiveTimeline";
 import ContactForm from "@/components/ui/ContactForm";
 import BlogSection from "@/components/ui/BlogSection";
+import { useEffect } from "react";
 
 
-// export const metadata = {
-//   title: "Eyob | Full-Stack Developer Portfolio",
-//   description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
-//   keywords: ["Eyob", "Portfolio", "Full-Stack Developer", "MERN", "React", "Next.js", "JavaScript", "TypeScript"],
-//   openGraph: {
-//     title: "Eyob | Full-Stack Developer Portfolio",
-//     description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
-//     url: "https://my-portfolio-taupe-sigma-98.vercel.app/", // Replace with your real domain
-//     siteName: "Eyob Portfolio",
-//     images: [
-//       {
-//         url: "https://my-portfolio-taupe-sigma-98.vercel.app/projects", // Replace with your OG image
-//         width: 1200,
-//         height: 630,
-//       },
-//     ],
-//     locale: "en_US",
-//     type: "website",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Eyob | Full-Stack Developer Portfolio",
-//     description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
-//     images: ["https://my-portfolio-taupe-sigma-98.vercel.app/"], // Replace with your OG image
-//   },
-// };
 
 export default function Home() {
+  // Ensure page starts at the top when component mounts
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+    
+    // Remove any hash from URL to prevent auto-scrolling to sections
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   return (
     <>
       <Script

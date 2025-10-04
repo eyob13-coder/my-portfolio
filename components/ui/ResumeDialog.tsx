@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 
@@ -34,14 +33,20 @@ const ResumeDialog = ({ open, onOpenChange, src, fileName }: ResumeDialogProps) 
 
           <div className="w-full h-full bg-black">
             <object data={src} type="application/pdf" className="w-full h-full">
-              <Image
-                src={src}
-                alt="Resume preview"
-                
-                className="object-contain"
-                
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-              />
+              <div className="w-full h-full flex items-center justify-center text-white">
+                <div className="text-center">
+                  <p className="text-lg mb-4">Unable to display PDF</p>
+                  <p className="text-sm text-white/60">Your browser doesn&apos;t support PDF viewing</p>
+                  <a
+                    href={src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-white/90 transition-colors"
+                  >
+                    Open PDF in new tab
+                  </a>
+                </div>
+              </div>
             </object>
           </div>
 

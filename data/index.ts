@@ -1,6 +1,7 @@
 import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaLightbulb, FaRocket, FaReact, FaNodeJs, FaGit, FaDocker, FaAws, FaCss3} from 'react-icons/fa';
 
 export const navItems = [
+   { name: "Home", link: "#hero" },
    { name: "About", link: "#about" },
    { name: "Projects", link: "#projects" },
    { name: "Skills", link: "#skills" },
@@ -87,10 +88,10 @@ export const skillCategories = [
   {
     category: "Backend",
     skills: [
-      { name: "Node.js", level: 85, icon: "/c.svg", color: "from-green-400 to-green-600" },
-      { name: "Express.js", level: 80, icon: "/c.svg", color: "from-gray-400 to-gray-600" },
+      { name: "Node.js", level: 85, icon: "/nodejs.svg", color: "from-green-400 to-green-600" },
+      { name: "Express.js", level: 80, icon: "/express.svg", color: "from-gray-400 to-gray-600" },
       { name: "MongoDB", level: 78, icon: "/mongodb.svg", color: "from-green-500 to-green-700" },
-      { name: "REST APIs", level: 88, icon: "/c.svg", color: "from-blue-400 to-blue-600" },
+      { name: "REST APIs", level: 88, icon: "/restapi.svg", color: "from-blue-400 to-blue-600" },
       { name: "Appwrite", level: 75, icon: "/app.svg", color: "from-red-400 to-red-600" },
     ]
   },
