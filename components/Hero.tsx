@@ -12,24 +12,29 @@ const Hero = () => {
   const [openResume, setOpenResume] = useState(false);
 
   return (
-    <div id="hero" className="relative pb-8 pt-20 md:pb-20 md:pt-36 w-full overflow-hidden min-h-screen flex items-center">
+    <div id="hero" className="relative pb-8 pt-24 md:pb-20 md:pt-36 w-full overflow-hidden min-h-[100svh] flex items-center bg-[rgba(12,14,35,1)]">
       <div className="absolute inset-0">
         <Spotlight 
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" 
           fill="white" 
         />
         <Spotlight 
-          className="h-[80vh] w-[50vw] top-10 left-full" 
+          className="h-[80vh] w-[50vw] top-10 left-0" 
           fill="purple" 
         />
         <Spotlight 
-          className="left-80 top-28 h-[80vh] w-[50vw]" 
+          className="right-80 top-28 h-[80vh] w-[50vw]" 
           fill="blue" 
+        />
+        {/* Rotated spotlight for opposite direction */}
+        <Spotlight 
+          className="bottom-0 right-0 h-[80vh] w-[50vw] rotate-180" 
+          fill="#7c3aed" 
         />
       </div>
 
       <BackgroundBeamsWithCollision className="flex items-center justify-center">
-        <div className="relative z-50 w-full max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] px-4">
+        <div className="relative z-50 w-full max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] px-4 bg- ">
           <div className="text-center">
             {/* Animated Badge */}
             <motion.div
@@ -69,12 +74,12 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Hi, I&#39;m Eyob, a full-stack <span className="font-bold">{"( MERN )"}</span> Developer based in Ethiopia.
+              Hi, I&#39;m Eyob, a full-stack <span className="font-bold">( MERN )</span> Developer based in Ethiopia.
             </motion.p>
             
-            {/* Enhanced Buttons */}
+            {/* Buttons */}
             <motion.div 
-              className="mt-3 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 "
+              className="mt-3 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -123,15 +128,14 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 dark:bg-black-100 bg-dark flex items-center justify-center">
+        <div className="absolute inset-0 bg-transparent flex items-center justify-center">
           <div 
             className={cn(
               "absolute inset-0 [background-size:40px_40px]",
-              "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-              "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+              "[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
             )} 
           />
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_25%,black)]" />
         </div>
       </BackgroundBeamsWithCollision>
 

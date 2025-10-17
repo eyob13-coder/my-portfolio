@@ -15,7 +15,16 @@ const jetbrainsMono = JetBrains_Mono({
 //implement title
 export const metadata = {
   title: "Eyob | Full-Stack Developer Portfolio",
-  description: "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
+  description:
+    "Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/eyob.jpeg", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/eyob.jpeg" }],
+    shortcut: [{ url: "/favicon.svg" }],
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +37,11 @@ export default function RootLayout({
       <Head>
         <title>Eyob | Full-Stack Developer Portfolio</title>
         <meta name="description" content="Explore the portfolio of Eyob, a modern full-stack (MERN) developer. View projects, experience, and contact information." />
+        {/* Site Icon (SVG circular mask) */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/eyob.jpeg" />
+        <meta property="og:image" content="/eyob.jpeg" />
+        <meta name="twitter:image" content="/eyob.jpeg" />
       </Head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
@@ -35,7 +49,7 @@ export default function RootLayout({
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
-            enableSystem
+            enableSystem={false}
             disableTransitionOnChange
           >
             {children}
