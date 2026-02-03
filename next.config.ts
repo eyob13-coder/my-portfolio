@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
   },
   typescript:{
     ignoreBuildErrors:true,
-  }
+  },
+  allowedDevOrigins: ['*'],
 };
 
 export default withSentryConfig(nextConfig, {
