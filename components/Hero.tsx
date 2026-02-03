@@ -49,12 +49,12 @@ const Hero = () => {
             </motion.div>
 
             <motion.h2 
-              className="uppercase tracking-widest text-xs text-blue-100 mb-2 md:mb-4"
+              className="uppercase tracking-[0.3em] text-xs text-red-500 mb-2 md:mb-4 font-mono animate-pulse"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Dynamic Web Magic with Next.js
+              System Offline - Access Restricted
             </motion.h2>
             
             <motion.div
@@ -63,18 +63,18 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <TextGenerateEffect
-                className="text-center text-[32px] md:text-5xl lg:text-6xl font-bold"
-                words="Transforming Concepts into Seamless User Experiences"
+                className="text-center text-[32px] md:text-5xl lg:text-6xl font-bold tracking-tighter"
+                words="You've Entered The Locked Chamber"
               />
             </motion.div>
             
             <motion.p 
-              className="mt-3 md:mt-6 text-center md:tracking-wider text-sm md:text-lg lg:text-xl bg-gradient-to-r from-purple-300 via-violet-300 to-blue-300 text-transparent bg-clip-text"
+              className="mt-3 md:mt-6 text-center md:tracking-wider text-sm md:text-lg lg:text-xl font-mono text-gray-400"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Hi, I&#39;m Eyob, a full-stack <span className="font-bold">( MERN )</span> Developer based in Ethiopia.
+              Decrypt the experience to find the exit. I&#39;m Eyob, the Architect of this puzzle.
             </motion.p>
             
             {/* Buttons */}
@@ -86,17 +86,18 @@ const Hero = () => {
             >
               <a href="#about" className="block">
                 <MagicButton
-                  title="Show my work"
+                  title="Start the Challenge"
                   icon={<FaLocationArrow />}
                   position="right"
+                  otherClasses="bg-red-900/20 border-red-500/50"
                 />
               </a>
               <button onClick={() => setOpenResume(true)} className="block">
                 <MagicButton
-                  title="See Resume"
+                  title="Examine Blueprint"
                   icon={<FaLocationArrow />}
                   position="left"
-                  otherClasses=""
+                  otherClasses="bg-blue-900/20"
                 />
               </button>
             </motion.div>

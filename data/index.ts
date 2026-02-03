@@ -1,28 +1,28 @@
 import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaLightbulb, FaRocket, FaReact, FaNodeJs, FaGit, FaDocker, FaAws, FaCss3} from 'react-icons/fa';
 
 export const navItems = [
-   { name: "Home", link: "#hero" },
-   { name: "About", link: "#about" },
-   { name: "Projects", link: "#projects" },
-   { name: "Skills", link: "#skills" },
-   { name: "Testimonials", link: "#testimonials" },
-   { name: "Contact", link: "#contact" },
-    ];
-    
-    export const gridItems = [
+   { name: "Entrance", link: "#hero" },
+   { name: "Chamber", link: "#about" },
+   { name: "Case Files", link: "#projects" },
+   { name: "Mastery", link: "#skills" },
+   { name: "Echoes", link: "#testimonials" },
+   { name: "Exit Door", link: "#contact" },
+];
+
+export const gridItems = [
    {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Decrypting the core logic through deep collaboration",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    imgClassName: "w-full h-full grayscale hover:grayscale-0 transition-all duration-500",
     titleClassName: "justify-end",
     img: "/b1.svg",
     spareImg: "",
    },
    {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Global network synchronization. No time zone is a barrier.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -32,8 +32,8 @@ export const navItems = [
    },
    {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "The Arsenal",
+    description: "Every puzzle needs the right tool",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -42,7 +42,7 @@ export const navItems = [
    },
    {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Analytical mind with a passion for architectural puzzles.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -50,20 +50,19 @@ export const navItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
    },
-    
    {
     id: 5,
-    title: "Currently building a SaaS App",
-    description: "The Inside Scoop",
+    title: "Constructing the Next Secure Vault",
+    description: "System Blueprint",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-50",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
     spareImg: "/grid.svg",
    },
    {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Are you ready to solve the next big challenge?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -71,7 +70,7 @@ export const navItems = [
     img: "",
     spareImg: "",
    },
-    ];
+];
 
 export const skillCategories = [
   {

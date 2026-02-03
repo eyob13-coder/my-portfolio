@@ -47,11 +47,14 @@ export default function Home() {
           }),
         }}
       />
-      <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
+      <main className="relative bg-[#050505] flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip font-mono">
         <div className="max-w-7xl w-full">
           <FloatingNav navItems={navItems}/>
           <Hero/>
-          <Grid/>
+          <section className="relative">
+             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50" />
+             <Grid/>
+          </section>
           <RecentProjects/>
           <Clients/>
           <SkillsGrid />
