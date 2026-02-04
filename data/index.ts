@@ -15,7 +15,7 @@ export const gridItems = [
     title: "Master Architect Eyob",
     description: "The gatekeeper of this digital maze.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500",
+    imgClassName: "w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500 bg-[#0c0e23]",
     titleClassName: "justify-end",
     img: "/eyob_profile.jpg",
     spareImg: "",
