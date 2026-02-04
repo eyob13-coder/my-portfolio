@@ -57,6 +57,17 @@ export const BentoGridItem = ({
   const rightLists = ["Node.js", "Mongo DB", "NEXT.js"];
 
   const [copied, setCopied] = useState(false);
+  const [puzzleAnswer, setPuzzleAnswer] = useState("");
+  const [isUnlocked, setIsUnlocked] = useState(false);
+
+  const handlePuzzleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (puzzleAnswer.toLowerCase() === "unlock") {
+      setIsUnlocked(true);
+    } else {
+      alert("Incorrect key! Try again.");
+    }
+  };
 
   const defaultOptions = {
     loop: copied,
@@ -76,7 +87,6 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
@@ -84,6 +94,29 @@ export const BentoGridItem = ({
         backgroundColor: "rgba(12,14,35,1)",
       }}
     >
+      {/* Riddle Logic for ID 1 */}
+      {id === 1 && !isUnlocked && (
+        <div className="absolute inset-0 z-[100] bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center">
+          <h3 className="text-xl font-mono text-red-500 mb-4 animate-pulse">SYSTEM LOCKED</h3>
+          <p className="text-gray-400 mb-6 font-mono text-sm">
+            "I have keys but no locks. I have a space but no room. You can enter, but never leave."
+          </p>
+          <form onSubmit={handlePuzzleSubmit} className="flex flex-col gap-4 w-full max-w-[200px]">
+            <input 
+              type="text" 
+              placeholder="Enter the password..." 
+              value={puzzleAnswer}
+              onChange={(e) => setPuzzleAnswer(e.target.value)}
+              className="bg-gray-900 border border-red-500/30 rounded px-3 py-2 text-white font-mono text-center outline-none focus:border-red-500"
+            />
+            <button type="submit" className="bg-red-500/20 border border-red-500 text-red-500 py-2 rounded font-mono hover:bg-red-500 hover:text-white transition-all">
+              DECRYPT
+            </button>
+          </form>
+          <p className="mt-4 text-[10px] text-gray-600 font-mono italic underline">Hint: It's what you're using to solve this.</p>
+        </div>
+      )}
+
       {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">

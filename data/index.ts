@@ -12,12 +12,12 @@ export const navItems = [
 export const gridItems = [
    {
     id: 1,
-    title: "Decrypting the core logic through deep collaboration",
-    description: "",
+    title: "Master Architect Eyob",
+    description: "The gatekeeper of this digital maze.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full grayscale hover:grayscale-0 transition-all duration-500",
+    imgClassName: "w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/eyob_profile.jpg",
     spareImg: "",
    },
    {
