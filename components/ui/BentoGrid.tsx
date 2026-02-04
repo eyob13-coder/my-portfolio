@@ -62,7 +62,7 @@ export const BentoGridItem = ({
 
   const handlePuzzleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (puzzleAnswer.toLowerCase() === "unlock") {
+    if (puzzleAnswer.toLowerCase() === "keyboard") {
       setIsUnlocked(true);
     } else {
       alert("Incorrect key! Try again.");
