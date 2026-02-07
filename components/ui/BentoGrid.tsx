@@ -59,13 +59,20 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
   const [puzzleAnswer, setPuzzleAnswer] = useState("");
   const [isUnlocked, setIsUnlocked] = useState(false);
+  const [glitch, setGlitch] = useState(false);
 
   const handlePuzzleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (puzzleAnswer.toLowerCase() === "keyboard") {
-      setIsUnlocked(true);
+      setGlitch(true);
+      setTimeout(() => {
+        setIsUnlocked(true);
+        setGlitch(false);
+      }, 500);
     } else {
-      alert("Incorrect key! Try again.");
+      setGlitch(true);
+      setTimeout(() => setGlitch(false), 300);
+      alert("CRITICAL ERROR: ACCESS DENIED");
     }
   };
 
@@ -87,7 +94,8 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 font-mono puzzle-border",
+        glitch && "animate-pulse border-red-500",
         className
       )}
       style={{
@@ -96,24 +104,36 @@ export const BentoGridItem = ({
     >
       {/* Riddle Logic for ID 1 */}
       {id === 1 && !isUnlocked && (
-        <div className="absolute inset-0 z-[100] bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center">
-          <h3 className="text-xl font-mono text-red-500 mb-4 animate-pulse">SYSTEM LOCKED</h3>
-          <p className="text-gray-400 mb-6 font-mono text-sm">
+        <div className="absolute inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6 text-center border-2 border-red-500/20">
+          <div className="absolute top-2 left-2 flex gap-1">
+             <div className="w-1 h-1 bg-red-500 rounded-full animate-ping" />
+             <div className="text-[10px] text-red-500/50 font-mono">SEC_LOG_v4.2</div>
+          </div>
+          <h3 className="text-xl font-mono text-red-500 mb-2 tracking-tighter">PHASE 1: AUTHENTICATION</h3>
+          <div className="w-full h-[1px] bg-red-500/20 mb-4" />
+          <p className="text-gray-400 mb-6 font-mono text-xs leading-relaxed max-w-[250px]">
             "I have keys but no locks. I have a space but no room. You can enter, but never leave."
           </p>
-          <form onSubmit={handlePuzzleSubmit} className="flex flex-col gap-4 w-full max-w-[200px]">
-            <input 
-              type="text" 
-              placeholder="Enter the password..." 
-              value={puzzleAnswer}
-              onChange={(e) => setPuzzleAnswer(e.target.value)}
-              className="bg-gray-900 border border-red-500/30 rounded px-3 py-2 text-white font-mono text-center outline-none focus:border-red-500"
-            />
-            <button type="submit" className="bg-red-500/20 border border-red-500 text-red-500 py-2 rounded font-mono hover:bg-red-500 hover:text-white transition-all">
-              DECRYPT
+          <form onSubmit={handlePuzzleSubmit} className="flex flex-col gap-3 w-full max-w-[220px]">
+            <div className="relative">
+              <input 
+                type="text" 
+                placeholder="[INPUT COMMAND]" 
+                value={puzzleAnswer}
+                onChange={(e) => setPuzzleAnswer(e.target.value)}
+                className="w-full bg-black border-b border-red-500/50 px-3 py-2 text-red-500 font-mono text-center outline-none focus:border-red-500 placeholder:text-red-900/50 text-sm"
+              />
+            </div>
+            <button type="submit" className="group relative px-4 py-2 font-mono text-sm overflow-hidden">
+              <span className="relative z-10 text-red-500 group-hover:text-white transition-colors duration-300">EXECUTE DECRYPTION</span>
+              <div className="absolute inset-0 bg-red-500/10 group-hover:bg-red-500 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 origin-left" />
+              <div className="absolute inset-0 border border-red-500/50" />
             </button>
           </form>
-          <p className="mt-4 text-[10px] text-gray-600 font-mono italic underline">Hint: It's what you're using to solve this.</p>
+          <div className="mt-8 flex flex-col items-center opacity-30">
+             <div className="text-[10px] text-gray-500 font-mono">HINT_BUFFER_OVERFLOW:</div>
+             <div className="text-[10px] text-gray-500 font-mono italic">Physical input device required.</div>
+          </div>
         </div>
       )}
 

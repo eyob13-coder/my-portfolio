@@ -153,13 +153,36 @@
     @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
   }
 
+  /* Escape Room Custom UI */
+  .puzzle-border {
+    @apply border-2 border-red-500/20 relative;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.05);
+  }
+
+  .puzzle-border::after {
+    content: '';
+    @apply absolute -top-[2px] -left-[2px] w-4 h-4 border-t-2 border-l-2 border-red-500;
+  }
+
+  .puzzle-border::before {
+    content: '';
+    @apply absolute -bottom-[2px] -right-[2px] w-4 h-4 border-b-2 border-r-2 border-red-500;
+  }
+
+  .glitch-text {
+    animation: glitch 1s linear infinite;
+  }
+
+  @keyframes glitch {
+    2%, 64% { transform: translate(2px, 0) skew(0deg); }
+    4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+    62% { transform: translate(0, 0) skew(5deg); }
+  }
+
   .category-title {
     @apply text-2xl font-bold text-white text-center mb-8;
   }
-
-  .skills-container {
-    @apply space-y-4;
-  }
+}
 
   .resume-section {
     @apply mt-20 text-center;
