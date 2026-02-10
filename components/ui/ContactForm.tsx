@@ -55,20 +55,24 @@ const ContactForm = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Get In <span className="text-purple-300">Touch</span>
+        Final <span className="text-red-500 font-mono">Extraction</span>
       </motion.h1>
       
       <div className="container-max">
         <motion.div
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto puzzle-border p-8 bg-black/60 backdrop-blur-md"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <div className="mb-8 text-center">
+            <p className="text-red-500 font-mono text-xs uppercase tracking-widest mb-2">Secure Channel Established</p>
+            <p className="text-white/60 font-mono text-sm">Transmit your request to reach the exit.</p>
+          </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-white font-medium mb-2">
-                Name
+              <label htmlFor="name" className="block text-red-500 font-mono text-xs uppercase mb-2">
+                Ident-ID
               </label>
               <input
                 type="text"
@@ -77,14 +81,14 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-lg text-white placeholder-white/50 focus:border-purple-500 focus:outline-none transition-colors"
-                placeholder="Your name"
+                className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white font-mono placeholder-white/20 focus:border-red-500 focus:outline-none transition-colors"
+                placeholder="Alias..."
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-white font-medium mb-2">
-                Email
+              <label htmlFor="email" className="block text-red-500 font-mono text-xs uppercase mb-2">
+                Comm-Link
               </label>
               <input
                 type="email"
@@ -93,14 +97,14 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-lg text-white placeholder-white/50 focus:border-purple-500 focus:outline-none transition-colors"
-                placeholder="your.email@example.com"
+                className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white font-mono placeholder-white/20 focus:border-red-500 focus:outline-none transition-colors"
+                placeholder="Secure email..."
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-white font-medium mb-2">
-                Message
+              <label htmlFor="message" className="block text-red-500 font-mono text-xs uppercase mb-2">
+                Encrypted Data
               </label>
               <textarea
                 id="message"
@@ -109,17 +113,17 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-lg text-white placeholder-white/50 focus:border-purple-500 focus:outline-none transition-colors resize-none"
-                placeholder="Tell me about your project..."
+                className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white font-mono placeholder-white/20 focus:border-red-500 focus:outline-none transition-colors resize-none"
+                placeholder="Provide mission details..."
               />
             </div>
             
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full resume-button disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
+              className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-bold font-mono rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed border-b-4 border-red-900 shadow-lg"
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? "TRANSMITTING..." : "INITIATE EXTRACTION"}
             </button>
             
             {submitStatus === "success" && (

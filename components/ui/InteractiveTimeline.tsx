@@ -14,12 +14,12 @@ const InteractiveTimeline = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Professional <span className="text-purple-300">Journey</span>
+        The Chronicles of <span className="text-red-500 font-mono">Infiltration</span>
       </motion.h1>
       
       <div className="relative max-w-6xl mx-auto px-4">
         {/* Timeline line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-500" />
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-500/50 via-red-500/20 to-transparent" />
         
         {/* Timeline items */}
         <div className="space-y-16">
@@ -36,31 +36,31 @@ const InteractiveTimeline = () => {
              {/* Content */}
 <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
   <motion.div
-    className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10 
-               hover:border-white/20 transition-all duration-300 group cursor-pointer break-words overflow-hidden"
+    className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-red-500/10 
+               hover:border-red-500/40 transition-all duration-300 group cursor-pointer break-words overflow-hidden puzzle-border"
     whileHover={{ 
-      scale: 1.05,
-      boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+      scale: 1.02,
+      boxShadow: "0 0 30px rgba(239,68,68,0.1)"
     }}
   >
     <div className="flex flex-col md:flex-row items-start gap-4">
-      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 
+      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-900/40 to-black 
                     flex items-center justify-center text-white text-2xl font-bold
-                    group-hover:scale-110 transition-transform duration-300">
+                    group-hover:scale-110 transition-transform duration-300 border border-red-500/20">
 
         <Image src={thumbnail} 
         alt="experience thumbnail"
         width={48}
         height={48}
-        className="w-12 h-12 object-contain" />
+        className="w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all" />
 
       </div>
       <div className="flex-1">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 
-                     transition-colors duration-300 break-words">
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-500 
+                     transition-colors duration-300 break-words font-mono">
           {title}
         </h3>
-        <p className="text-white/70 leading-relaxed break-words">
+        <p className="text-white/60 leading-relaxed break-words font-mono text-sm">
           {desc}
         </p>
         
@@ -69,8 +69,8 @@ const InteractiveTimeline = () => {
           {["React", "Next.js", "TypeScript", "Node.js"].map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full
-                       border border-purple-500/30 break-words"
+              className="px-3 py-1 bg-red-500/10 text-red-400 text-xs rounded-full
+                       border border-red-500/20 break-words font-mono"
             >
               {tech}
             </span>

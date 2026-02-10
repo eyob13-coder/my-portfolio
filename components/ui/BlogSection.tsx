@@ -20,7 +20,7 @@ const BlogSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Latest <span className="text-purple-300">Insights</span>
+          Intercepted <span className="text-red-500 font-mono">Signals</span>
         </motion.h1>
         
         {/* Featured Article */}
@@ -32,43 +32,41 @@ const BlogSection = () => {
         >
           <div className="relative group cursor-pointer">
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 
+              className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent 
                          rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             />
-            <div className="relative bg-black/20 backdrop-blur-sm rounded-3xl border border-white/10 
-                           p-8 hover:border-white/20 transition-all duration-300">
+            <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl border border-red-500/10 
+                           p-8 hover:border-red-500/30 transition-all duration-300 puzzle-border">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30">
-                      Featured
+                    <span className="px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full border border-red-500/30 font-mono">
+                      Priority: HIGH
                     </span>
-                    <span className="text-white/50 text-sm">Latest Article</span>
+                    <span className="text-white/50 text-xs font-mono">Latest Transmission</span>
                   </div>
-                  <h2 className="text-3xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+                  <h2 className="text-3xl font-bold text-white mb-4 group-hover:text-red-500 transition-colors duration-300 font-mono">
                     Join My Tech Journey on Telegram
                   </h2>
-                  <p className="text-white/70 text-lg leading-relaxed mb-6">
-                    I share updates from my journey in tech-side projects, personal insights, thoughts, 
-                    and latest trends on my Telegram channel called night_code_vibe. As a life-long learner, 
-                    I&#39;m constantly growing and evolving. Feel free to join the conversation! 💥
+                  <p className="text-white/60 text-lg leading-relaxed mb-6 font-mono text-sm">
+                    I share encrypted updates from my journey in tech-side projects, personal insights, and security trends on my private feed. As a life-long learner, I&#39;m constantly evolving. Join the extraction team!
                   </p>
                   <div className="flex items-center gap-4">
                     <motion.a
                       href="https://t.me/night_coders_vibe"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-blue-500 
-                                 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 
-                                 hover:to-blue-600 transition-all duration-300 group/btn"
+                      className="inline-flex items-center gap-3 bg-red-600/80 
+                                 text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 
+                                 transition-all duration-300 group/btn font-mono"
                       whileHover={{ y: -2, scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <FaTelegram className="text-xl group-hover/btn:scale-110 transition-transform duration-300" />
-                      Join Channel
+                      Secure Join
                       <FaArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </motion.a>
-                    <div className="text-white/50 text-sm">400+ members</div>
+                    <div className="text-white/50 text-xs font-mono">400+ Active Agents</div>
                   </div>
                 </div>
                 
