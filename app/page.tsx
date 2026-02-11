@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
-    
+
     // Remove any hash from URL to prevent auto-scrolling to sections
     if (window.location.hash) {
       window.history.replaceState(null, '', window.location.pathname);
@@ -47,22 +47,22 @@ export default function Home() {
           }),
         }}
       />
-      <main className="relative bg-[#050505] flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip font-mono">
-        <div className="max-w-7xl w-full">
-          <FloatingNav navItems={navItems}/>
-          <Hero/>
+      <main className="relative bg-[#050505] flex justify-center items-center flex-col mx-auto overflow-clip font-mono">
+        <FloatingNav navItems={navItems} />
+        <Hero />
+        <div className="max-w-7xl w-full sm:px-10 px-5">
           <section className="relative">
-             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50" />
-             <Grid/>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50" />
+            <Grid />
           </section>
-          <RecentProjects/>
-          <Clients/>
+          <RecentProjects />
+          <Clients />
           <SkillsGrid />
           <InteractiveTimeline />
-          <Approach/>
+          <Approach />
           <BlogSection />
           <ContactForm />
-          <Footer/>
+          <Footer />
         </div>
       </main>
     </>

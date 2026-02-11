@@ -5,7 +5,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 
 
@@ -64,15 +64,15 @@ export const FloatingNav = ({
           <a
             key={`link=${idx}`}
             href={navItem.link}
+            title={navItem.name}
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-red-500 hover:text-red-500 transition-colors"
             )}
           >
-            <span className="block sm:hidden text-lg">{navItem.icon}</span>
-            <span className="text-xs md:text-sm !cursor-pointer font-mono whitespace-nowrap">{navItem.name}</span>
+            <span className="text-xl">{navItem.icon}</span>
           </a>
         ))}
-       
+
       </motion.div>
     </AnimatePresence>
   );
