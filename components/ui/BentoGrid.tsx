@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 
 import { BackgroundGradientAnimation } from "./GradientBg";
-import {GlobeDemo} from "./GridGlobe";
+import { GlobeDemo } from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 export const BentoGrid = ({
@@ -106,8 +106,8 @@ export const BentoGridItem = ({
       {id === 1 && !isUnlocked && (
         <div className="absolute inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6 text-center border-2 border-red-500/20">
           <div className="absolute top-2 left-2 flex gap-1">
-             <div className="w-1 h-1 bg-red-500 rounded-full animate-ping" />
-             <div className="text-[10px] text-red-500/50 font-mono">SEC_LOG_v4.2</div>
+            <div className="w-1 h-1 bg-red-500 rounded-full animate-ping" />
+            <div className="text-[10px] text-red-500/50 font-mono">SEC_LOG_v4.2</div>
           </div>
           <h3 className="text-xl font-mono text-red-500 mb-2 tracking-tighter">PHASE 1: AUTHENTICATION</h3>
           <div className="w-full h-[1px] bg-red-500/20 mb-4" />
@@ -116,9 +116,9 @@ export const BentoGridItem = ({
           </p>
           <form onSubmit={handlePuzzleSubmit} className="flex flex-col gap-3 w-full max-w-[220px]">
             <div className="relative">
-              <input 
-                type="text" 
-                placeholder="[INPUT COMMAND]" 
+              <input
+                type="text"
+                placeholder="[INPUT COMMAND]"
                 value={puzzleAnswer}
                 onChange={(e) => setPuzzleAnswer(e.target.value)}
                 className="w-full bg-black border-b border-red-500/50 px-3 py-2 text-red-500 font-mono text-center outline-none focus:border-red-500 placeholder:text-red-900/50 text-sm"
@@ -131,8 +131,8 @@ export const BentoGridItem = ({
             </button>
           </form>
           <div className="mt-8 flex flex-col items-center opacity-30">
-             <div className="text-[10px] text-gray-500 font-mono">HINT_BUFFER_OVERFLOW:</div>
-             <div className="text-[10px] text-gray-500 font-mono italic">Physical input device required.</div>
+            <div className="text-[10px] text-gray-500 font-mono">HINT_BUFFER_OVERFLOW:</div>
+            <div className="text-[10px] text-gray-500 font-mono italic">Physical input device required.</div>
           </div>
         </div>
       )}
@@ -144,10 +144,13 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-top ")}
             />
           )}
         </div>
+        {/* Dark overlay for better text readability on light images */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-[5]" />
+
         <div
           className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
             } `}
